@@ -1,0 +1,63 @@
+{
+  "name": "@repo/playground-playwright-monorepo",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "turbo dev",
+    "fix": "turbo fix && prettier --write .",
+    "lint": "turbo lint && prettier --check .",
+    "test": "turbo test"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog",
+      "disableSubjectLowerCase": true,
+      "types": {
+        "build": {
+          "description": "ビルドシステムや外部依存関係に影響する変更 (スコープ例: gulp, broccoli, npm)"
+        },
+        "chore": {
+          "description": "src や test ファイルを変更しないその他の変更"
+        },
+        "ci": {
+          "description": "CI の設定ファイルやスクリプトの変更 (スコープ例: Travis, Circle, BrowserStack, SauceLabs)"
+        },
+        "docs": {
+          "description": "ドキュメントのみの変更"
+        },
+        "feat": {
+          "description": "新機能"
+        },
+        "fix": {
+          "description": "バグ修正"
+        },
+        "perf": {
+          "description": "パフォーマンスを向上させるコード変更"
+        },
+        "refactor": {
+          "description": "バグ修正でも機能追加でもないコード変更"
+        },
+        "revert": {
+          "description": "以前のコミットを取り消す"
+        },
+        "style": {
+          "description": "コードの意味に影響を与えない変更（空白、書式、セミコロンの欠落など）"
+        },
+        "test": {
+          "description": "不足しているテストの追加や既存のテストの修正"
+        }
+      }
+    }
+  },
+  "devDependencies": {
+    "prettier": "3.6.2",
+    "turbo": "2.5.8"
+  },
+  "packageManager": "pnpm@10.18.2",
+  "engines": {
+    "node": "24.10.0",
+    "npm": "forbidden, use pnpm",
+    "pnpm": "10.18.2",
+    "yarn": "forbidden, use pnpm"
+  }
+}

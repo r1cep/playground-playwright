@@ -1,0 +1,29 @@
+# global ignores
+.commit_template
+.gitignore
+.prettierignore
+.stylelintignore
+pnpm-lock.yaml
+
+# test coverage と build を除外
+coverage
+dist
+
+# TOML のパースには prettier-plugin-toml が必要
+# 依存を増やしたくなかったので TOML は除外します
+mise.toml
+
+# CSS Modules Kit
+.generated
+
+# GraphQL
+.graphql
+
+# husky
+.husky
+
+# msw
+mockServiceWorker.js
+
+# Storybook
+storybook-static

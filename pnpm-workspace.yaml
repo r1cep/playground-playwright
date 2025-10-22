@@ -1,0 +1,31 @@
+# ref. https://pnpm.io/settings
+
+# peerDependencies を自動でインストールさせない設定
+# ref. https://pnpm.io/settings#autoinstallpeers
+autoInstallPeers: false
+
+# package.json の `engines` フィールドのバージョン以外はインストールを失敗させます
+# ref. https://pnpm.io/settings#enginestrict
+engineStrict: false
+
+# ローカルで利用可能なパッケージをレジストリからダウンロードするのではなくリンクします
+# ref. https://pnpm.io/settings#linkworkspacepackages
+linkWorkspacePackages: deep
+
+# npm のサプライチェーン攻撃のリスクを軽減するためにリリースから7日間未満のパッケージをインストールできなくします
+# https://pnpm.io/settings#minimumreleaseage
+minimumReleaseAge: 10080
+
+# pnpm workspace で管理するパッケージ群です
+# ref. https://pnpm.io/pnpm-workspace_yaml
+#
+# **NOTE** Turborepo が `packages/**` のようなネストしたパッケージをサポートしていないため `*` を使用します
+# ref. https://turborepo.com/docs/crafting-your-repository/structuring-a-repository#declaring-directories-for-packages
+packages:
+  - "packages/*"
+  - "packages/config/*"
+
+# インストール時の pnpm デフォルトの範囲指定 `^` から厳密なバージョン `^1.0.0` -> `1.0.0` にします
+# **NOTES** 範囲を指定して追加した場合はその限りではありません
+# ref. https://pnpm.io/settings#saveprefix
+savePrefix: ""

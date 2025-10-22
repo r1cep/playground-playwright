@@ -1,0 +1,5 @@
+[tools]
+node = "24.10.0"
+"npm:commitizen" = "latest"
+"npm:cz-conventional-changelog" = "latest"
+"npm:pnpm" = "10.18.2"
