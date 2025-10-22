@@ -122,11 +122,8 @@ jobs:
         env:
           HUSKY: "0"
 
-      - name: Install Playwright
-        run: pnpm -F @repo/ui exec playwright install --with-deps
-
       - name: Test
-        run: pnpm -F @repo/ui test
+        run: pnpm test
         env:
           TURBO_TELEMETRY_DISABLED: 1
 

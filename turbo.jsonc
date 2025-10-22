@@ -15,6 +15,9 @@
     },
     "test": {
       "dependsOn": ["^test"],
+      // CI の GitHub actions で playwright の container イメージを使うとエラーになる対応
+      // ref. https://github.com/vercel/turborepo/issues/8386
+      "env": ["PLAYWRIGHT_BROWSERS_PATH"],
       "outputs": [],
     },
     "transit": {
