@@ -122,6 +122,9 @@ jobs:
         env:
           HUSKY: "0"
 
+      - name: Install Playwright
+        run: pnpm -F @repo/ui exec playwright install
+
       - name: Test
         run: pnpm test
         env:
