@@ -15,6 +15,9 @@ linkWorkspacePackages: deep
 # npm のサプライチェーン攻撃のリスクを軽減するためにリリースから7日間未満のパッケージをインストールできなくします
 # https://pnpm.io/settings#minimumreleaseage
 minimumReleaseAge: 10080
+minimumReleaseAgeExclude:
+  - playwright
+  - playwright-core
 
 # pnpm workspace で管理するパッケージ群です
 # ref. https://pnpm.io/pnpm-workspace_yaml
