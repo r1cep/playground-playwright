@@ -92,7 +92,7 @@ jobs:
   test:
     name: "Test"
     container:
-      image: mcr.microsoft.com/playwright:v1.49.0-jammy
+      image: mcr.microsoft.com/playwright:v1.56.0-noble
     needs:
       - filter
     if: needs.filter.outputs.packages == 'true'
