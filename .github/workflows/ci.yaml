@@ -123,7 +123,7 @@ jobs:
           HUSKY: "0"
 
       - name: Install Playwright
-        run: pnpm -F @repo/ui exec playwright install
+        run: pnpm -F @repo/ui exec playwright install --with-deps
 
       - name: Test
         run: pnpm test
